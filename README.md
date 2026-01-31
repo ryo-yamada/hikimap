@@ -8,7 +8,7 @@ I just wanted to make this because, why not?
 ## Use guide
 1. Open releases tab
 2. Download latest Python-based executable
-3. Run in terminal like so: `hikimap [target]`
+3. Run in terminal like so: `./hikimap [target]`
 
 *Linux only
 
