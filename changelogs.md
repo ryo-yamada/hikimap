@@ -1,5 +1,10 @@
 # Changelogs
-### Current Version - v1.0
+
+### Current version - v1.1
+- Port service guessing (based off of /etc/services)
+- Slight optimization
+
+### Version - v1.0
 - Birth
 
 ## Roadmap
@@ -7,4 +12,3 @@
 - Flags
     - Verbosity
     - Stealth scans, aggressive scans
-- Service guessing
