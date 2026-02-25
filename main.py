@@ -26,7 +26,7 @@ if len(sys.argv) != 2:
 
 target = socket.gethostbyname(sys.argv[1])
 
-print("hikimap 1.0 - (github.com/ryo-yamada/hikimap)")
+print("hikimap 1.1 - (github.com/ryo-yamada/hikimap)")
 print("* Service guesses are TCP only")
 print(f"Target - {target}")
 print(f"Started - {datetime.now().strftime('%H:%M:%S')}")
