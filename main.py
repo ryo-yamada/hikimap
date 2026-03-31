@@ -3,7 +3,7 @@ import asyncio
 import socket
 from datetime import datetime
 
-serviceGuesses = {}
+service_guesses = {}
 try:
     with open("/etc/services", "r") as f:
         for line in f:
@@ -16,7 +16,7 @@ try:
             port, protocol = port_protocol.split("/")
 
             if protocol == "tcp":
-                serviceGuesses[int(port)] = service
+                service_guesses[int(port)] = service
 except FileNotFoundError:
     print("* Warning - /etc/services not found")
 
@@ -41,8 +41,8 @@ async def scan_port(port):
         try:
             r,w = await asyncio.wait_for(asyncio.open_connection(target, port), timeout=0.3)
             open_ports.append(port)
-            serviceGuess = serviceGuesses.get(port, "unknown")
-            print(f"{port:<6} {serviceGuess}")
+            service_guess = service_guesses.get(port, "unknown")
+            print(f"{port:<6} {service_guess}")
             w.close()
             await w.wait_closed()
         except:
